@@ -41,7 +41,7 @@ const emitValue = (e) => {
     <div class="relative flex items-center px-0 h-full">
       <input
         :value="modelValue"
-        class="px-4 w-full md:min-w-[450px] text-[20px] py-3 h-full bg-transparent outline-none transition"
+        class="px-4 w-full md:min-w-[450px] md:text-[20px] py-3 h-full bg-transparent outline-none transition"
         :type="type"
         ref="input"
         @focus="onFocus"
@@ -50,9 +50,9 @@ const emitValue = (e) => {
       />
       <span
         :class="{
-          ' text-main -translate-y-6 transition px-0 !text-xl': isFocused || modelValue
+          ' text-main -translate-y-6 transition px-0 !text-base': isFocused || modelValue
         }"
-        class="flex-shrink-0 absolute pointer-events-none text-2xl"
+        class="flex-shrink-0 absolute pointer-events-none md:text-base"
         >{{ label }}</span
       >
     </div>

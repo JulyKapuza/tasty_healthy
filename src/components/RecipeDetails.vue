@@ -6,9 +6,9 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="3xl:container xl:px-4 flex">
-    <div class="my-auto me-10">
-      <img :src="details.recipe.image" class="w-[300px] h-[300px] rounded-[20px]" />
+  <div class="3xl:container xl:px-4 md:flex">
+    <div class="flex flex-col-reverse items-center gap-2 sm:my-auto md:me-10">
+      <img :src="details.recipe.image" class="w-[300px] h-[300px] rounded-[20px] mb-2 md:mb-0" />
       <div class="bg-main/[.3] rounded-[20px] mt-2 p-2 text-white">
         <div>
           <span class="text-xl bold">{{ $t('calories') }}</span
@@ -25,7 +25,7 @@ const props = defineProps({
       </div>
     </div>
 
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-2">
+    <div class="sm:grid grid-cols-2 lg:grid-cols-3 gap-2">
       <div
         v-for="item in details.recipe.ingredients"
         :key="item.food"

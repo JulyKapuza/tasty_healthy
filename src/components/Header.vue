@@ -13,9 +13,9 @@ const localeChange = (newLocale) => {
 </script>
 <template>
   <header class="sticky top-0 pt-0 xl:-top-5 xl:pt-5 z-50 3xl:container xl:px-4">
-    <div class="h-[80px] bg-main flex items-center justify-between px-5 rounded-[20px]">
-      <div class="font-logo text-[50px]">Tasty&Healthy</div>
-      <div class="w-[250px]">
+    <div class="h-[80px] bg-main md:flex items-center justify-between px-5 rounded-[20px]">
+      <div class="font-logo text-center text-[24px] md:text-[50px]">Tasty&Healthy</div>
+      <div class="w-[200px] mx-auto md:mx-0 md:w-[250px]">
         <Multiselect
           v-model="selectedLocale"
           @click="localeChange(selectedLocale)"
@@ -46,7 +46,6 @@ const localeChange = (newLocale) => {
   --ms-option-bg-pointed: rgb(255 255 255 / 0.05);
   --ms-option-bg-selected-pointed: rgb(255 255 255 / 0.15);
   --ms-option-color-pointed: #fff;
-  height: 48px;
   color: #263238;
 }
 
